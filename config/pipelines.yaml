@@ -1,0 +1,48 @@
+version: '13tool-final'
+upstreams:
+  denoise:
+    class: upstream.dncnn.DnCNNProcessor
+    weight_path: weights/dncnn_gaussian_color.pth
+    device: cuda
+    desc: DnCNN denoising for sigma-25 Gaussian noise
+  lowlight:
+    class: upstream.lowlight.LowLightProcessor
+    weight_path: weights/Zero-DCE_Epoch99.pth
+    device: cuda
+    desc: Zero-DCE low-light enhancement
+downstreams:
+  classify:
+    class: downstream.classify.ClassifyProcessor
+    num_classes: 6
+    labels: [cardboard, glass, metal, paper, plastic, trash]
+    weight_path: weights/trashnet_resnet50_seed1.pth
+    desc: Frozen six-class TrashNet classifier
+pipelines:
+  raw_cls:
+    upstream: ''
+    downstream: classify
+  denoise_cls:
+    upstream: denoise
+    downstream: classify
+    trigger: [noise_high]
+  lowlight_cls:
+    upstream: lowlight
+    downstream: classify
+    trigger: [lowlight]
+diagnosis:
+  noise:
+    high_threshold: 80.0
+  lowlight:
+    score_threshold: 0.6
+    dark_pixel_threshold: 40.0
+    clip_threshold: 250.0
+confidence_threshold: 0.6
+selector:
+  delta_conf: 0.02
+  tau_uncert: 0.25
+  kappa: 1.2
+  clip_max: 0.05
+router:
+  learned_weight: ''
+llm:
+  enabled: false

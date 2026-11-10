@@ -1,0 +1,327 @@
+{
+ "contrasts": [
+  {
+   "scope": "six_scene",
+   "method_a": "iterative",
+   "method_b": "raw",
+   "diff": 0.04198966408268734,
+   "ci95": [
+    0.03281653746770026,
+    0.05167958656330749
+   ],
+   "n_records": 7740,
+   "n_sources": 430,
+   "boot": 10000,
+   "ci_excludes_zero": true
+  },
+  {
+   "scope": "six_scene",
+   "method_a": "iterative",
+   "method_b": "fixed_denoise",
+   "diff": 0.04108527131782946,
+   "ci95": [
+    0.028036175710594316,
+    0.05439276485788114
+   ],
+   "n_records": 7740,
+   "n_sources": 430,
+   "boot": 10000,
+   "ci_excludes_zero": true
+  },
+  {
+   "scope": "six_scene",
+   "method_a": "iterative",
+   "method_b": "fixed_lowlight",
+   "diff": 0.07093023255813953,
+   "ci95": [
+    0.053617571059431525,
+    0.08837209302325581
+   ],
+   "n_records": 7740,
+   "n_sources": 430,
+   "boot": 10000,
+   "ci_excludes_zero": true
+  },
+  {
+   "scope": "two_family",
+   "method_a": "iterative",
+   "method_b": "raw",
+   "diff": 0.08992248062015504,
+   "ci95": [
+    0.06821705426356589,
+    0.112015503875969
+   ],
+   "n_records": 2580,
+   "n_sources": 430,
+   "boot": 10000,
+   "ci_excludes_zero": true
+  },
+  {
+   "scope": "two_family",
+   "method_a": "iterative",
+   "method_b": "fixed_denoise",
+   "diff": 0.0755813953488372,
+   "ci95": [
+    0.05503875968992248,
+    0.09651162790697675
+   ],
+   "n_records": 2580,
+   "n_sources": 430,
+   "boot": 10000,
+   "ci_excludes_zero": true
+  },
+  {
+   "scope": "two_family",
+   "method_a": "iterative",
+   "method_b": "fixed_lowlight",
+   "diff": 0.08643410852713178,
+   "ci95": [
+    0.06550387596899225,
+    0.10697674418604651
+   ],
+   "n_records": 2580,
+   "n_sources": 430,
+   "boot": 10000,
+   "ci_excludes_zero": true
+  }
+ ],
+ "per_scene": [
+  {
+   "method_a": "iterative",
+   "method_b": "raw",
+   "scene": "clean",
+   "diff": 0.0007751937984496124,
+   "ci95": [
+    0.0,
+    0.002325581395348837
+   ]
+  },
+  {
+   "method_a": "iterative",
+   "method_b": "raw",
+   "scene": "jpeg",
+   "diff": 0.0031007751937984496,
+   "ci95": [
+    -0.0007751937984496124,
+    0.007751937984496124
+   ]
+  },
+  {
+   "method_a": "iterative",
+   "method_b": "raw",
+   "scene": "lowlight",
+   "diff": 0.05813953488372093,
+   "ci95": [
+    0.03255813953488372,
+    0.08449612403100776
+   ]
+  },
+  {
+   "method_a": "iterative",
+   "method_b": "raw",
+   "scene": "mixed",
+   "diff": 0.06821705426356589,
+   "ci95": [
+    0.03875968992248062,
+    0.09689922480620156
+   ]
+  },
+  {
+   "method_a": "iterative",
+   "method_b": "raw",
+   "scene": "motion_blur",
+   "diff": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "method_a": "iterative",
+   "method_b": "raw",
+   "scene": "noise",
+   "diff": 0.12170542635658915,
+   "ci95": [
+    0.08837209302325581,
+    0.15426356589147286
+   ]
+  },
+  {
+   "method_a": "iterative",
+   "method_b": "fixed_denoise",
+   "scene": "clean",
+   "diff": 0.04806201550387597,
+   "ci95": [
+    0.024806201550387597,
+    0.07131782945736434
+   ]
+  },
+  {
+   "method_a": "iterative",
+   "method_b": "fixed_denoise",
+   "scene": "jpeg",
+   "diff": 0.027131782945736434,
+   "ci95": [
+    0.0,
+    0.053488372093023255
+   ]
+  },
+  {
+   "method_a": "iterative",
+   "method_b": "fixed_denoise",
+   "scene": "lowlight",
+   "diff": 0.11317829457364341,
+   "ci95": [
+    0.08139534883720931,
+    0.14573643410852713
+   ]
+  },
+  {
+   "method_a": "iterative",
+   "method_b": "fixed_denoise",
+   "scene": "mixed",
+   "diff": 0.010852713178294573,
+   "ci95": [
+    -0.01317829457364341,
+    0.034108527131782945
+   ]
+  },
+  {
+   "method_a": "iterative",
+   "method_b": "fixed_denoise",
+   "scene": "motion_blur",
+   "diff": 0.009302325581395349,
+   "ci95": [
+    -0.01937984496124031,
+    0.03798449612403101
+   ]
+  },
+  {
+   "method_a": "iterative",
+   "method_b": "fixed_denoise",
+   "scene": "noise",
+   "diff": 0.03798449612403101,
+   "ci95": [
+    0.010077519379844961,
+    0.06434108527131784
+   ]
+  },
+  {
+   "method_a": "iterative",
+   "method_b": "fixed_lowlight",
+   "scene": "clean",
+   "diff": 0.08682170542635659,
+   "ci95": [
+    0.05813953488372093,
+    0.11705426356589148
+   ]
+  },
+  {
+   "method_a": "iterative",
+   "method_b": "fixed_lowlight",
+   "scene": "jpeg",
+   "diff": 0.08139534883720931,
+   "ci95": [
+    0.05116279069767442,
+    0.11162790697674418
+   ]
+  },
+  {
+   "method_a": "iterative",
+   "method_b": "fixed_lowlight",
+   "scene": "lowlight",
+   "diff": -0.004651162790697674,
+   "ci95": [
+    -0.023255813953488372,
+    0.01317829457364341
+   ]
+  },
+  {
+   "method_a": "iterative",
+   "method_b": "fixed_lowlight",
+   "scene": "mixed",
+   "diff": 0.03798449612403101,
+   "ci95": [
+    0.007751937984496124,
+    0.06899224806201551
+   ]
+  },
+  {
+   "method_a": "iterative",
+   "method_b": "fixed_lowlight",
+   "scene": "motion_blur",
+   "diff": 0.046511627906976744,
+   "ci95": [
+    0.011627906976744186,
+    0.08139534883720931
+   ]
+  },
+  {
+   "method_a": "iterative",
+   "method_b": "fixed_lowlight",
+   "scene": "noise",
+   "diff": 0.17751937984496124,
+   "ci95": [
+    0.13953488372093023,
+    0.21627906976744185
+   ]
+  }
+ ],
+ "metrics": {
+  "two_family": {
+   "raw": {
+    "acc_mean": 0.689922480620155,
+    "acc_sd": 0.0033342345996289044,
+    "f1_mean": 0.6626094120161637,
+    "f1_sd": 0.0034741898770964752,
+    "per_seed_f1": [
+     0.6631016332450036,
+     0.6665968910901275,
+     0.6581297117133601
+    ]
+   },
+   "iterative": {
+    "acc_mean": 0.7798449612403101,
+    "acc_sd": 0.015230141631308914,
+    "f1_mean": 0.7576609562362814,
+    "f1_sd": 0.01051387093279811,
+    "per_seed_f1": [
+     0.7454733507483494,
+     0.7563785182479905,
+     0.7711309997125041
+    ]
+   }
+  },
+  "six_scene": {
+   "raw": {
+    "acc_mean": 0.7093023255813954,
+    "acc_sd": 0.007153937054215561,
+    "f1_mean": 0.6822510241237483,
+    "f1_sd": 0.0017677697036762715,
+    "per_seed_f1": [
+     0.6807199707273833,
+     0.6813049956195015,
+     0.6847281060243602
+    ]
+   },
+   "iterative": {
+    "acc_mean": 0.7512919896640827,
+    "acc_sd": 0.007623833845959647,
+    "f1_mean": 0.7259200919097135,
+    "f1_sd": 0.0007767250112899809,
+    "per_seed_f1": [
+     0.7265190502871123,
+     0.7264180393705267,
+     0.7248231860715014
+    ]
+   }
+  }
+ },
+ "protocol": {
+  "cluster": "source image (430 TrashNet sources)",
+  "records_per_source": "6 scenes x 3 seeds = 18",
+  "bootstrap": 10000,
+  "rng_seed": 20261101,
+  "ci": "percentile 2.5-97.5"
+ }
+}

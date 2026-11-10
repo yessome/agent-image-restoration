@@ -1,0 +1,2 @@
+# The frozen manifest verifies the exact YAML bytes.
+/config/*.yaml -text

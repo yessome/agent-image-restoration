@@ -1,0 +1,23 @@
+# 正式精简配置：13 分支 = raw + 12 个修复工具（8 去噪 + 4 低光）。
+# 去掉 2 个去模糊（restormer_defocus / mprnet_deblur）
+# 与 2 个超分（realesrgan_x2 / x4），router 为对应重训的 13 分支权重。
+# 默认选择已有 seed1 配对，不按 test 准确率挑 seed；模型与阈值继续冻结。
+base_config: pipelines.yaml
+model_toolbox:
+  enabled: true
+  exclude:
+    - restormer_defocus
+    - mprnet_deblur
+    - realesrgan_x2
+    - realesrgan_x4
+routing:
+  mode: iterative
+router:
+  learned_weight: ''
+iterative_router:
+  weight_path: weights/router_iterative_feedback_13tool_seed1.pth
+downstreams:
+  classify:
+    weight_path: weights/trashnet_resnet50_seed1.pth
+llm:
+  enabled: false

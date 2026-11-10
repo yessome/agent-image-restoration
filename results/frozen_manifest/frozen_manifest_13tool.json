@@ -1,0 +1,195 @@
+{
+  "schema": "frozen-13tool-v1",
+  "note": "最终 13 工具配置的冻结凭据。旧版 17 工具资产不属于此发布包。",
+  "created_at": "2026-11-01T13:18:18Z",
+  "supersedes_note": "本清单是最终论文口径；三组 router 与 classifier 一一配对。",
+  "routers": {
+    "seed1": {
+      "path": "weights/router_iterative_feedback_13tool_seed1.pth",
+      "sha256": "69fd33911d43de6bae2f7536fbe2dc704a565d9f08dce1d707f36c13c4a90e78",
+      "bytes": 141141,
+      "exists": true
+    },
+    "seed2": {
+      "path": "weights/router_iterative_feedback_13tool_seed2.pth",
+      "sha256": "8ec17f547ed8b3de52568c6fcea00418747c023839e83af2dacf037da7a94e6f",
+      "bytes": 140757,
+      "exists": true
+    },
+    "seed3": {
+      "path": "weights/router_iterative_feedback_13tool_seed3.pth",
+      "sha256": "398b6b513558f5bf82996b4cfdce4464607861b5e6f8de7f0fbc6f1599a395d3",
+      "bytes": 141013,
+      "exists": true
+    }
+  },
+  "classifiers": {
+    "seed1": {
+      "path": "weights/trashnet_resnet50_seed1.pth",
+      "sha256": "e7488db2f5a4339a7b3afba822bf36a367b6fc66d196cbc26284763f318dff9d",
+      "bytes": 94404575,
+      "exists": true
+    },
+    "seed2": {
+      "path": "weights/trashnet_resnet50_seed2.pth",
+      "sha256": "5f3c555dce8005a6cff4250d383b706463dd44d4863c60cab5277c6182ac09b5",
+      "bytes": 94404575,
+      "exists": true
+    },
+    "seed3": {
+      "path": "weights/trashnet_resnet50_seed3.pth",
+      "sha256": "ca818355a0ced4209ba7c4ab7619917a46054d7c897e533aa6628a400c1490fd",
+      "bytes": 94404575,
+      "exists": true
+    }
+  },
+  "configs": {
+    "config/iterative_agent_13tool.yaml": {
+      "path": "config/iterative_agent_13tool.yaml",
+      "sha256": "3a650ce4d332fd3e1ddf2d5d043e6e2381f3d208ede7f269cf1744f8dc7d5716",
+      "bytes": 733,
+      "exists": true
+    },
+    "config/pipelines.yaml": {
+      "path": "config/pipelines.yaml",
+      "sha256": "b5e9cc7ea8e7f5009c47d16eef0a15fdfd9b8879952eb4af407db60a795ee6b5",
+      "bytes": 1160,
+      "exists": true
+    },
+    "config/pretrained_tools.yaml": {
+      "path": "config/pretrained_tools.yaml",
+      "sha256": "e41749c4b65319d844f64df2e88433f8bd63b8e8b9f41d8c145d593f810e180a",
+      "bytes": 1447,
+      "exists": true
+    }
+  },
+  "tools": {
+    "denoise": {
+      "path": "weights/dncnn_gaussian_color.pth",
+      "sha256": "a1b506402dbfa9e334cdd0d689b734f76e726d2b598792cb190014d9dba47a11",
+      "bytes": 2724125,
+      "exists": true
+    },
+    "ffdnet": {
+      "path": "weights/pretrained/ffdnet_color.pth",
+      "sha256": "c831d4ca905638a2e3fd3a829a8df636def340052bdd542cb503c76d5df37a16",
+      "bytes": 3427101,
+      "exists": true
+    },
+    "scunet": {
+      "path": "weights/pretrained/scunet_color_real_psnr.pth",
+      "sha256": "fa78899ba2caec9d235a900e91d96c689da71c42029230c2028b00f09f809c2e",
+      "bytes": 71982841,
+      "exists": true
+    },
+    "restormer_real": {
+      "path": "weights/pretrained/restormer_real_denoising.pth",
+      "sha256": "4cae18bed8a291b9a5deeeab48756bbe6f61fcf7f31a4cca0969b24608601387",
+      "bytes": 104611957,
+      "exists": true
+    },
+    "restormer_blind": {
+      "path": "weights/pretrained/restormer_gaussian_blind.pth",
+      "sha256": "4e2314dae77bb907184da6e2ac625b921491d6b33de26a52512eff1c6bb37fbd",
+      "bytes": 104611957,
+      "exists": true
+    },
+    "restormer_sigma15": {
+      "path": "weights/pretrained/restormer_gaussian_sigma15.pth",
+      "sha256": "5841e0d280379da2526252ffcde9ff60a1d7951bf49688136a77cbea0ad6ff51",
+      "bytes": 104611957,
+      "exists": true
+    },
+    "restormer_sigma25": {
+      "path": "weights/pretrained/restormer_gaussian_sigma25.pth",
+      "sha256": "8ecc333de6e4a5055cbe9ec82313cbe9afbe2c2eb69c634cb4e24e9e14eea96c",
+      "bytes": 104611957,
+      "exists": true
+    },
+    "restormer_sigma50": {
+      "path": "weights/pretrained/restormer_gaussian_sigma50.pth",
+      "sha256": "5dad2b7f1ac806a8a585c41714929400bb32046293fe14eecc7214501081cb38",
+      "bytes": 104611957,
+      "exists": true
+    },
+    "lowlight": {
+      "path": "weights/Zero-DCE_Epoch99.pth",
+      "sha256": "a4395acb874f320375d9704997cef874eaaaaa26a1777ceb29a92b70f74c3612",
+      "bytes": 320017,
+      "exists": true
+    },
+    "zero_dce_plus_plus": {
+      "path": "weights/pretrained/zero_dce_plus_plus.pth",
+      "sha256": "ca8855b90df9a80fa4195a831f33d3476b1964f787eb70602797c773067f3b84",
+      "bytes": 52395,
+      "exists": true
+    },
+    "sci_lowlight": {
+      "path": "weights/pretrained/sci_medium.pt",
+      "sha256": "4ff1e7e66e8f18114f790e5085ca4c936f0858e329e7ad1cb65b8aa09a9c6916",
+      "bytes": 43967,
+      "exists": true
+    },
+    "retinexformer": {
+      "path": "weights/pretrained/retinexformer_lol_v2_real.pth",
+      "sha256": "539bd16c4da6179e45616329f249c4672951b1045193428e1d042c50d4b65a0b",
+      "bytes": 6478393,
+      "exists": true
+    }
+  },
+  "branch_order": [
+    "",
+    "denoise",
+    "ffdnet",
+    "scunet",
+    "restormer_real",
+    "restormer_blind",
+    "restormer_sigma15",
+    "restormer_sigma25",
+    "restormer_sigma50",
+    "lowlight",
+    "zero_dce_plus_plus",
+    "sci_lowlight",
+    "retinexformer"
+  ],
+  "n_branches": 13,
+  "excluded_branches": [
+    "restormer_defocus",
+    "mprnet_deblur",
+    "realesrgan_x2",
+    "realesrgan_x4"
+  ],
+  "iterative_hparams": {
+    "max_calls": 4,
+    "call_cost": 0.01,
+    "clip_max": 0.05
+  },
+  "thresholds": {
+    "confidence_threshold": 0.6,
+    "selector": {
+      "delta_conf": 0.02,
+      "tau_uncert": 0.25,
+      "kappa": 1.2,
+      "clip_max": 0.05
+    },
+    "routing_mode": "iterative",
+    "iterative_weight": "weights/router_iterative_feedback_13tool_seed1.pth",
+    "llm_enabled": false
+  },
+  "pairing": {
+    "seed1": {
+      "router": "seed1",
+      "classifier": "seed1"
+    },
+    "seed2": {
+      "router": "seed2",
+      "classifier": "seed2"
+    },
+    "seed3": {
+      "router": "seed3",
+      "classifier": "seed3"
+    }
+  },
+  "routing_mode": "iterative",
+  "llm_enabled": false
+}

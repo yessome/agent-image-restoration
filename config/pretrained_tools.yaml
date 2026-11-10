@@ -1,0 +1,36 @@
+# Final 13-tool library: eight denoisers and four low-light enhancers.
+upstreams:
+  zero_dce_plus_plus:
+    class: upstream.lowlight.ZeroDCEPlusPlusProcessor
+    weight_path: weights/pretrained/zero_dce_plus_plus.pth
+    device: cuda
+  sci_lowlight:
+    class: upstream.lowlight.SCIProcessor
+    weight_path: weights/pretrained/sci_medium.pt
+  retinexformer:
+    class: upstream.retinexformer.RetinexformerProcessor
+    weight_path: weights/pretrained/retinexformer_lol_v2_real.pth
+  ffdnet:
+    class: upstream.deepinv_denoise.FFDNetProcessor
+    weight_path: weights/pretrained/ffdnet_color.pth
+    sigma: 25
+    device: cuda
+  scunet:
+    class: upstream.deepinv_denoise.SCUNetProcessor
+    weight_path: weights/pretrained/scunet_color_real_psnr.pth
+    device: cuda
+  restormer_real:
+    class: upstream.restormer.RestormerProcessor
+    weight_path: weights/pretrained/restormer_real_denoising.pth
+  restormer_blind:
+    class: upstream.restormer.RestormerProcessor
+    weight_path: weights/pretrained/restormer_gaussian_blind.pth
+  restormer_sigma15:
+    class: upstream.restormer.RestormerProcessor
+    weight_path: weights/pretrained/restormer_gaussian_sigma15.pth
+  restormer_sigma25:
+    class: upstream.restormer.RestormerProcessor
+    weight_path: weights/pretrained/restormer_gaussian_sigma25.pth
+  restormer_sigma50:
+    class: upstream.restormer.RestormerProcessor
+    weight_path: weights/pretrained/restormer_gaussian_sigma50.pth
